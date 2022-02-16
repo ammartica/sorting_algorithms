@@ -1,7 +1,6 @@
 #include "sort.h"
-
 /**
- * shell_sort - sorts array using Shell sort algorithm and Knuth sequence
+ * shell_sort - sorts array with Kuth sequence
  * @array: array to sort
  * @size: size of array
  */
@@ -14,7 +13,7 @@ void shell_sort(int *array, size_t size)
 		return;
 	while (gap <= size / 3)
 	{
-		gap *= 3 + 1;
+		gap = (gap * 3) + 1;
 	}
 	while (gap > 0)
 	{
@@ -26,7 +25,7 @@ void shell_sort(int *array, size_t size)
 			while (in > gap - 1 && array[in - gap] >= temp)
 			{
 				array[in] = array[in - gap];
-				in -= gap;
+				in = in - gap;
 			}
 			array[in] = temp;
 		}
