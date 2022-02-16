@@ -9,11 +9,9 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	int low = size - 1;
-
 	if (array == NULL || size == 0)
 		return;
-	quickSort(array, 0, low, size);
+	quickSort(array, 0, size - 1, size);
 }
 
 /**
